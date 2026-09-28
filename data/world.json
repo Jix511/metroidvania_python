@@ -1,0 +1,152 @@
+{
+  "dimensions": {"width": 300, "height": 50},
+  "boundaries": {"floor_depth": 3, "side_wall_width": 2},
+  "platforms": [
+    {"x0": 12, "x1": 20, "y": 41},
+    {"x0": 30, "x1": 38, "y": 35},
+    {"x0": 47, "x1": 54, "y": 40},
+    {"x0": 68, "x1": 77, "y": 39},
+    {"x0": 85, "x1": 94, "y": 32},
+    {"x0": 103, "x1": 112, "y": 40},
+    {"x0": 128, "x1": 137, "y": 38},
+    {"x0": 146, "x1": 155, "y": 31},
+    {"x0": 164, "x1": 173, "y": 39},
+    {"x0": 188, "x1": 197, "y": 39},
+    {"x0": 207, "x1": 216, "y": 32},
+    {"x0": 225, "x1": 233, "y": 39},
+    {"x0": 248, "x1": 257, "y": 39},
+    {"x0": 267, "x1": 276, "y": 31},
+    {"x0": 285, "x1": 294, "y": 39}
+    ,{"x0": 18, "x1": 23, "y": 34}, {"x0": 36, "x1": 41, "y": 29},
+    {"x0": 51, "x1": 56, "y": 36}, {"x0": 63, "x1": 68, "y": 42},
+    {"x0": 73, "x1": 79, "y": 28}, {"x0": 99, "x1": 104, "y": 34},
+    {"x0": 123, "x1": 129, "y": 30}, {"x0": 138, "x1": 144, "y": 24},
+    {"x0": 158, "x1": 164, "y": 34}, {"x0": 183, "x1": 189, "y": 30},
+    {"x0": 198, "x1": 204, "y": 24}, {"x0": 218, "x1": 224, "y": 29},
+    {"x0": 242, "x1": 248, "y": 41}, {"x0": 258, "x1": 264, "y": 25},
+    {"x0": 278, "x1": 284, "y": 34}
+  ],
+  "moving_platforms": [
+    {"id": "meadow_bridge", "zone_id": "meadow", "axis": "x", "start": [42, 38], "end": [51, 38], "width": 3, "speed": 48},
+    {"id": "cave_lift", "zone_id": "caves", "axis": "y", "start": [76, 42], "end": [76, 31], "width": 3, "speed": 42},
+    {"id": "ruins_ferry", "zone_id": "ruins", "axis": "x", "start": [132, 35], "end": [143, 35], "width": 4, "speed": 54},
+    {"id": "sanctum_lift", "zone_id": "sanctum", "axis": "y", "start": [196, 41], "end": [196, 29], "width": 3, "speed": 46},
+    {"id": "peak_bridge", "zone_id": "peak", "axis": "x", "start": [249, 35], "end": [260, 35], "width": 3, "speed": 62}
+  ],
+  "abilities": {
+    "double_jump": "Doble Salto",
+    "dash": "Dash",
+    "wall_jump": "Salto en Pared",
+    "teleport": "Teletransporte"
+  },
+  "gates": {
+    "gate_wind": {
+      "required": "double_jump",
+      "name": "Puerta Vendaval",
+      "color": [100, 220, 255]
+    },
+    "gate_shadow": {
+      "required": "dash",
+      "name": "Puerta Sombra",
+      "color": [190, 100, 255]
+    },
+    "gate_rune": {
+      "required": "teleport",
+      "name": "Puerta Rúnica",
+      "color": [255, 170, 60]
+    },
+    "gate_storm": {
+      "required": "wall_jump",
+      "name": "Puerta Tormenta",
+      "color": [160, 255, 120]
+    }
+  },
+  "dividers": [
+    {"tx": 59, "gate_id": "gate_wind", "wall_y0": 34, "wall_y1": 46, "gate_y0": 44, "gate_y1": 46},
+    {"tx": 119, "gate_id": "gate_shadow", "wall_y0": 34, "wall_y1": 46, "gate_y0": 44, "gate_y1": 46},
+    {"tx": 179, "gate_id": "gate_rune", "wall_y0": 34, "wall_y1": 46, "gate_y0": 44, "gate_y1": 46},
+    {"tx": 239, "gate_id": "gate_storm", "wall_y0": 34, "wall_y1": 46, "gate_y0": 44, "gate_y1": 46}
+  ],
+  "zones": [
+    {"id": "meadow", "name": "Claro Inicial", "x0": 0, "x1": 59},
+    {"id": "caves", "name": "Cavernas Húmedas", "x0": 60, "x1": 119},
+    {"id": "ruins", "name": "Ruinas Sumergidas", "x0": 120, "x1": 179},
+    {"id": "sanctum", "name": "Santuario", "x0": 180, "x1": 239},
+    {"id": "peak", "name": "Pico Tormentoso", "x0": 240, "x1": 299}
+  ],
+  "rooms": [
+    {"id": "meadow_trail", "zone_id": "meadow", "name": "Sendero del Alba", "kind": "exploration", "x0": 0, "x1": 19},
+    {"id": "meadow_shrine", "zone_id": "meadow", "name": "Arboleda del Santuario", "kind": "rest", "x0": 20, "x1": 39},
+    {"id": "meadow_gate", "zone_id": "meadow", "name": "Linde del Vendaval", "kind": "challenge", "x0": 40, "x1": 59},
+    {"id": "caves_mouth", "zone_id": "caves", "name": "Boca Húmeda", "kind": "exploration", "x0": 60, "x1": 79},
+    {"id": "caves_depths", "zone_id": "caves", "name": "Galería de Cristal", "kind": "platforming", "x0": 80, "x1": 99},
+    {"id": "caves_nest", "zone_id": "caves", "name": "Nido de la Madre", "kind": "boss", "x0": 100, "x1": 119},
+    {"id": "ruins_causeway", "zone_id": "ruins", "name": "Calzada Sumergida", "kind": "exploration", "x0": 120, "x1": 139},
+    {"id": "ruins_archive", "zone_id": "ruins", "name": "Archivo Quebrado", "kind": "secret", "x0": 140, "x1": 159},
+    {"id": "ruins_bastion", "zone_id": "ruins", "name": "Bastión del Ahogado", "kind": "challenge", "x0": 160, "x1": 179},
+    {"id": "sanctum_steps", "zone_id": "sanctum", "name": "Escalinata Rúnica", "kind": "exploration", "x0": 180, "x1": 199},
+    {"id": "sanctum_oracle", "zone_id": "sanctum", "name": "Cámara del Oráculo", "kind": "rest", "x0": 200, "x1": 219},
+    {"id": "sanctum_guard", "zone_id": "sanctum", "name": "Atrio del Guardián", "kind": "boss", "x0": 220, "x1": 239},
+    {"id": "peak_ascent", "zone_id": "peak", "name": "Ascenso Quebrado", "kind": "platforming", "x0": 240, "x1": 259},
+    {"id": "peak_eye", "zone_id": "peak", "name": "Ojo de la Tormenta", "kind": "challenge", "x0": 260, "x1": 279},
+    {"id": "peak_heart", "zone_id": "peak", "name": "Corona del Vacío", "kind": "boss", "x0": 280, "x1": 299}
+  ],
+  "ability_routes": [
+    {"id": "meadow_canopy", "zone_id": "meadow", "name": "Dosel del Alba", "required": "double_jump", "start": [31, 34], "goal": [39, 28], "reward": {"xp": 35, "gold": 30, "heal": "none", "items": []}},
+    {"id": "cave_chimney", "zone_id": "caves", "name": "Chimenea de Cristal", "required": "wall_jump", "start": [72, 42], "goal": [76, 27], "reward": {"xp": 60, "gold": 45, "heal": "none", "items": [{"minimum_rarity": "magic"}]}},
+    {"id": "ruins_dash_tunnel", "zone_id": "ruins", "name": "Conducto del Vigía", "required": "dash", "start": [153, 46], "goal": [158, 46], "obstacle": {"type": "dash_barrier", "tx": 156, "y0": 43, "y1": 46}, "reward": {"xp": 80, "gold": 65, "heal": "half", "items": []}},
+    {"id": "sanctum_rune_fold", "zone_id": "sanctum", "name": "Pliegue Rúnico", "required": "teleport", "start": [202, 23], "goal": [221, 28], "obstacle": {"type": "teleport_anchors"}, "reward": {"xp": 105, "gold": 80, "heal": "none", "items": [{"minimum_rarity": "rare"}]}},
+    {"id": "peak_spire", "zone_id": "peak", "name": "Aguja del Relámpago", "required": "wall_jump", "start": [252, 40], "goal": [261, 24], "reward": {"xp": 135, "gold": 100, "skill_points": 1, "heal": "half", "items": []}}
+  ],
+  "checkpoints": [
+    {"id": "cp_meadow", "zone_id": "meadow", "name": "Claro Inicial", "tx": 24},
+    {"id": "cp_caves", "zone_id": "caves", "name": "Cavernas Húmedas", "tx": 88},
+    {"id": "cp_ruins", "zone_id": "ruins", "name": "Ruinas Sumergidas", "tx": 146},
+    {"id": "cp_sanctum", "zone_id": "sanctum", "name": "Santuario", "tx": 202},
+    {"id": "cp_peak", "zone_id": "peak", "name": "Pico Tormentoso", "tx": 268}
+  ],
+  "tutorial_signs": [
+    {"tx": 8, "title": "Moverse", "text": "Izquierda/derecha para correr. Salta con {jump}."},
+    {"tx": 22, "title": "Santuarios", "text": "Toca el obelisco: respawn, cura y viaje rápido ({travel})."},
+    {"tx": 31, "title": "Combate", "text": "Ataca con {attack}. Gana XP, sube de nivel y gasta puntos ({skills})."},
+    {"tx": 40, "title": "Herrería", "text": "Compra, mejora y forja. Bebe pociones con {potion}. Mira tu equipo ({inventory})."},
+    {"tx": 54, "title": "Puertas selladas", "text": "Cada puerta exige una habilidad. El Vendaval pide Doble Salto."}
+  ],
+  "enemy_spawns": [
+    {"enemy": "slime", "tx": 15}, {"enemy": "slime", "tx": 34},
+    {"enemy": "moss_boar", "tx": 49}, {"enemy": "skeleton", "tx": 69},
+    {"enemy": "crystal_beetle", "tx": 96}, {"enemy": "bat", "tx": 82},
+    {"enemy": "goblin", "tx": 128}, {"enemy": "bat", "tx": 151},
+    {"enemy": "ruin_drowned", "tx": 169}, {"enemy": "goblin", "tx": 188},
+    {"enemy": "rune_acolyte", "tx": 214}, {"enemy": "skeleton", "tx": 230},
+    {"enemy": "skeleton", "tx": 248}, {"enemy": "bat", "tx": 262},
+    {"enemy": "storm_harpy", "tx": 276}, {"enemy": "bat", "tx": 287},
+    {"enemy": "goblin", "tx": 294}
+  ],
+  "load_enemy_spawns": [
+    {"enemy": "slime", "tx": 15}, {"enemy": "moss_boar", "tx": 34},
+    {"enemy": "skeleton", "tx": 69}, {"enemy": "crystal_beetle", "tx": 82},
+    {"enemy": "ruin_drowned", "tx": 128}, {"enemy": "skeleton", "tx": 169},
+    {"enemy": "goblin", "tx": 188}, {"enemy": "rune_acolyte", "tx": 230},
+    {"enemy": "storm_harpy", "tx": 262}, {"enemy": "goblin", "tx": 287}
+  ],
+  "miniboss_spawns": [
+    {"miniboss": "colossal_slime", "tx": 106},
+    {"miniboss": "broken_knight", "tx": 157}
+  ],
+  "boss_arenas": [
+    {"id": "cavern_mother", "trigger_tx": 101, "spawn_tx": 111, "x0": 96, "x1": 117},
+    {"id": "sanctum_guardian", "trigger_tx": 210, "spawn_tx": 226, "x0": 204, "x1": 237},
+    {"id": "void_heart", "trigger_tx": 270, "spawn_tx": 289, "x0": 264, "x1": 297}
+  ],
+  "shopkeeper": {"tx": 41, "ty": 47, "x_offset": 8, "y_offset": 0},
+  "loot_spawns": [
+    {"tx": 90, "ty": 31, "slot": "accessory", "rarity": "epic", "level": 3, "name": "Talismán del Vigía"},
+    {"tx": 272, "ty": 30, "slot": "weapon", "rarity": "epic", "level": 5, "name": "Filo de la Tormenta"}
+  ],
+  "victory_text": {
+    "cavern_mother": "¡CIÉNAGA PURIFICADA! +1 pt habilidad y curación",
+    "sanctum_guardian": "¡SANTUARIO LIBERADO! +2 pts habilidad, legendario y curación",
+    "void_heart": "¡VACÍO CONSUMIDO! +3 pts habilidad, doble legendario"
+  }
+}

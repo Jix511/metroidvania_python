@@ -1,0 +1,27 @@
+{
+  "meadow_gate": {
+    "name": "Prueba del Vendaval",
+    "waves": [["slime", "moss_boar"], ["moss_boar", "moss_boar"]],
+    "reward": {"xp": 45, "gold": 35, "heal": "half", "items": []}
+  },
+  "caves_depths": {
+    "name": "Ecos de Cristal",
+    "waves": [["bat", "crystal_beetle"], ["crystal_beetle", "skeleton"]],
+    "reward": {"xp": 70, "gold": 50, "heal": "half", "items": [{"minimum_rarity": "magic"}]}
+  },
+  "ruins_bastion": {
+    "name": "Guardia Sumergida",
+    "waves": [["goblin", "ruin_drowned"], ["ruin_drowned", "skeleton", "ruin_drowned"]],
+    "reward": {"xp": 95, "gold": 70, "heal": "half", "items": [{"minimum_rarity": "rare"}]}
+  },
+  "sanctum_steps": {
+    "name": "Rito de las Runas",
+    "waves": [["goblin", "rune_acolyte"], ["rune_acolyte", "rune_acolyte", "skeleton"]],
+    "reward": {"xp": 125, "gold": 90, "skill_points": 1, "heal": "half", "items": []}
+  },
+  "peak_eye": {
+    "name": "Juicio de la Tormenta",
+    "waves": [["bat", "storm_harpy"], ["storm_harpy", "storm_harpy", "goblin"]],
+    "reward": {"xp": 160, "gold": 120, "heal": "full", "items": [{"minimum_rarity": "epic"}]}
+  }
+}

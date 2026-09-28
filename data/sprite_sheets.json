@@ -1,0 +1,162 @@
+{
+  "player:warrior": {
+    "source": "warrior-male.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "player:rogue": {
+    "source": "rogue-male.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "player:mage": {
+    "source": "mage-female.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "player:ranger": {
+    "source": "ranger-female-pilot-v2.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "player:kitsune": {
+    "source": "kitsune-female.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "player:reaper": {
+    "source": "reaper-female-v1.png",
+    "columns": 4,
+    "rows": 4,
+    "canvas": [80, 56],
+    "padding": 2,
+    "scaling": "nearest",
+    "animations": {
+      "idle": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "run": [[0, 1], [1, 1], [2, 1], [3, 1]],
+      "jump": [[0, 2], [1, 2]],
+      "hurt": [[2, 2], [3, 2]],
+      "attack": [[0, 3], [1, 3], [2, 3], [3, 3]]
+    }
+  },
+  "enemy:slime": {
+    "source": "enemy-atlas.png", "columns": 4, "rows": 4,
+    "canvas": [48, 40], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,0]], "run": [[1,0]], "jump": [[1,0]], "attack": [[2,0]], "hurt": [[3,0]]}
+  },
+  "enemy:skeleton": {
+    "source": "enemy-atlas.png", "columns": 4, "rows": 4,
+    "canvas": [48, 56], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,1]], "run": [[1,1]], "jump": [[1,1]], "attack": [[2,1]], "hurt": [[3,1]]}
+  },
+  "enemy:bat": {
+    "source": "enemy-atlas.png", "columns": 4, "rows": 4,
+    "canvas": [52, 40], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,2]], "run": [[1,2]], "jump": [[1,2]], "attack": [[2,2]], "hurt": [[3,2]]}
+  },
+  "enemy:goblin": {
+    "source": "enemy-atlas.png", "columns": 4, "rows": 4,
+    "canvas": [48, 56], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,3]], "run": [[1,3]], "jump": [[1,3]], "attack": [[2,3]], "hurt": [[3,3]]}
+  },
+  "enemy:moss_boar": {
+    "source": "zone-enemies-atlas-v1.png", "columns": 4, "rows": 5,
+    "canvas": [72, 54], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,0]], "run": [[1,0]], "jump": [[1,0]], "attack": [[2,0]], "hurt": [[3,0]]}
+  },
+  "enemy:crystal_beetle": {
+    "source": "zone-enemies-atlas-v1.png", "columns": 4, "rows": 5,
+    "canvas": [70, 52], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,1]], "run": [[1,1]], "jump": [[1,1]], "attack": [[2,1]], "hurt": [[3,1]]}
+  },
+  "enemy:ruin_drowned": {
+    "source": "zone-enemies-atlas-v1.png", "columns": 4, "rows": 5,
+    "canvas": [64, 62], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,2]], "run": [[1,2]], "jump": [[1,2]], "attack": [[2,2]], "hurt": [[3,2]]}
+  },
+  "enemy:rune_acolyte": {
+    "source": "zone-enemies-atlas-v1.png", "columns": 4, "rows": 5,
+    "canvas": [68, 62], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,3]], "run": [[1,3]], "jump": [[1,3]], "attack": [[2,3]], "hurt": [[3,3]]}
+  },
+  "enemy:storm_harpy": {
+    "source": "zone-enemies-atlas-v1.png", "columns": 4, "rows": 5,
+    "canvas": [72, 60], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,4]], "run": [[1,4]], "jump": [[1,4]], "attack": [[2,4]], "hurt": [[3,4]]}
+  },
+  "miniboss:colossal_slime": {
+    "source": "miniboss-atlas.png", "columns": 4, "rows": 2,
+    "canvas": [78, 64], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,0]], "run": [[1,0]], "jump": [[1,0]], "attack": [[2,0]], "hurt": [[3,0]]}
+  },
+  "miniboss:broken_knight": {
+    "source": "miniboss-atlas.png", "columns": 4, "rows": 2,
+    "canvas": [72, 80], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,1]], "run": [[1,1]], "jump": [[1,1]], "attack": [[2,1]], "hurt": [[3,1]]}
+  },
+  "boss:cavern_mother": {
+    "source": "boss-atlas.png", "columns": 4, "rows": 3,
+    "canvas": [112, 88], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,0]], "run": [[1,0]], "jump": [[1,0]], "attack": [[2,0]], "hurt": [[3,0]]}
+  },
+  "boss:sanctum_guardian": {
+    "source": "boss-atlas.png", "columns": 4, "rows": 3,
+    "canvas": [96, 104], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,1]], "run": [[1,1]], "jump": [[1,1]], "attack": [[2,1]], "hurt": [[3,1]]}
+  },
+  "boss:void_heart": {
+    "source": "boss-atlas.png", "columns": 4, "rows": 3,
+    "canvas": [96, 104], "padding": 2, "scaling": "nearest",
+    "animations": {"idle": [[0,2]], "run": [[1,2]], "jump": [[1,2]], "attack": [[2,2]], "hurt": [[3,2]]}
+  }
+}

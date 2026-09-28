@@ -1,0 +1,17 @@
+{
+  "first_blood": {"name": "Primer paso", "description": "Derrota 1 enemigo", "category": "combate", "metric": "enemies_defeated", "target": 1, "reward": {"xp": 25}},
+  "hunter": {"name": "Cazador del reino", "description": "Derrota 50 enemigos", "category": "combate", "metric": "enemies_defeated", "target": 50, "reward": {"gold": 150}},
+  "heavy_hitter": {"name": "Fuerza imparable", "description": "Inflige 5000 de daño", "category": "combate", "metric": "damage_dealt", "target": 5000, "reward": {"xp": 200}},
+  "critical_eye": {"name": "Ojo crítico", "description": "Consigue 25 golpes críticos", "category": "combate", "metric": "critical_hits", "target": 25, "reward": {"skill_points": 1}},
+  "combo_master": {"name": "Ritmo perfecto", "description": "Alcanza un combo de 3", "category": "combate", "metric": "highest_combo", "target": 3, "reward": {"gold": 100}},
+  "boss_hunter": {"name": "Rompeleyendas", "description": "Derrota los 3 jefes", "category": "historia", "metric": "bosses_defeated", "target": 3, "reward": {"skill_points": 2}},
+  "explorer": {"name": "Sin piedra sin mirar", "description": "Explora 10 salas", "category": "exploracion", "metric": "explored_rooms", "target": 10, "reward": {"xp": 150}},
+  "secret_keeper": {"name": "Tras el muro", "description": "Descubre 3 secretos", "category": "exploracion", "metric": "discovered_secrets", "target": 3, "reward": {"gold": 200}},
+  "warrior_trial": {"name": "Acero decidido", "description": "Guerrero: inflige 2500 de daño", "category": "clase", "class": "warrior", "metric": "damage_dealt", "target": 2500, "reward": {"skill_points": 1}},
+  "ranger_trial": {"name": "Flecha certera", "description": "Arquera: logra 100 impactos", "category": "clase", "class": "ranger", "metric": "hits", "target": 100, "reward": {"skill_points": 1}},
+  "mage_trial": {"name": "Tejedora arcana", "description": "Maga: inflige 2500 de daño", "category": "clase", "class": "mage", "metric": "damage_dealt", "target": 2500, "reward": {"skill_points": 1}},
+  "rogue_trial": {"name": "Sombra precisa", "description": "Pícaro: logra 15 críticos", "category": "clase", "class": "rogue", "metric": "critical_hits", "target": 15, "reward": {"skill_points": 1}},
+  "kitsune_trial": {"name": "Fuego espiritual", "description": "Kitsune: inflige 2500 de daño", "category": "clase", "class": "kitsune", "metric": "damage_dealt", "target": 2500, "reward": {"skill_points": 1}},
+  "reaper_trial": {"name": "Danza del ocaso", "description": "Segadora: inflige 2500 de daño", "category": "clase", "class": "reaper", "metric": "damage_dealt", "target": 2500, "reward": {"skill_points": 1}},
+  "parry_master": {"name": "Ni un rasguño", "description": "Realiza 20 paradas perfectas", "category": "combate", "metric": "perfect_parries", "target": 20, "reward": {"skill_points": 1}}
+}

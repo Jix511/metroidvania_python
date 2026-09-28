@@ -1,0 +1,89 @@
+{
+  "maela": {
+    "name": "Maela, la Herrera",
+    "role": "shopkeeper",
+    "zone_id": "meadow",
+    "tx": 41,
+    "ty": 47,
+    "refuge_tx": 41,
+    "refuge_ty": 47,
+    "color": [214, 142, 72],
+    "dialogue": {
+      "default": ["El hierro recuerda cada golpe. Este reino también."],
+      "cavern_mother": ["La ciénaga calló. Ahora puedo oír el yunque otra vez."],
+      "all_bosses": ["Forjaste algo más fuerte que una espada: un nuevo comienzo."]
+    },
+    "lore": ["Las puertas fueron selladas para contener la niebla, no para detenerte.", "Busca los santuarios. Sus brasas todavía conocen el camino."]
+  },
+  "ilyra": {
+    "name": "Ilyra, Vigía del Musgo",
+    "role": "scout",
+    "zone_id": "caves",
+    "tx": 74,
+    "ty": 47,
+    "refuge_tx": 33,
+    "refuge_ty": 47,
+    "rescue_quest": "lost_forge",
+    "color": [86, 178, 132],
+    "dialogue": {
+      "default": ["Pisa despacio. Las cavernas escuchan mejor de lo que ven."],
+      "cavern_mother": ["El agua vuelve a correr limpia. La Madre ya no sueña bajo nosotros."],
+      "all_bosses": ["Hasta aquí llega el viento del Pico. Trae olor a lluvia, no a vacío."],
+      "refuge": ["Las rutas vuelven a unirse aquí. Marcaré cada sendero seguro desde el refugio."]
+    },
+    "lore": ["Los Vigías marcaban rutas con runas verdes.", "Una de esas runas protege el talismán perdido de Maela."]
+  },
+  "caldus": {
+    "name": "Caldus, Cronista Caído",
+    "role": "chronicler",
+    "zone_id": "ruins",
+    "tx": 139,
+    "ty": 47,
+    "refuge_tx": 27,
+    "refuge_ty": 47,
+    "rescue_quest": "broken_knight",
+    "color": [118, 146, 204],
+    "dialogue": {
+      "default": ["Estas piedras conservan nombres que el reino decidió olvidar."],
+      "broken_knight": ["El Caballero Roto ha descansado. Escribiré su nombre una última vez."],
+      "all_bosses": ["Hoy termina mi crónica del reino fracturado. La siguiente te pertenece."],
+      "refuge": ["He abierto un archivo junto al fuego. Aquí los nombres no volverán a perderse."]
+    },
+    "lore": ["El Caballero Roto protegía a quienes huyeron durante la primera niebla.", "Su juramento sobrevivió a su memoria."]
+  },
+  "sira": {
+    "name": "Sira, Custodia de Runas",
+    "role": "warden",
+    "zone_id": "sanctum",
+    "tx": 198,
+    "ty": 47,
+    "refuge_tx": 20,
+    "refuge_ty": 47,
+    "rescue_quest": "heart_of_kingdom",
+    "color": [178, 112, 212],
+    "dialogue": {
+      "default": ["El Santuario mide tu voluntad antes de abrir sus ojos."],
+      "sanctum_guardian": ["El Guardián cayó, pero la última cadena nace en el Pico."],
+      "all_bosses": ["Las runas ya no pronuncian tu nombre como advertencia, sino como promesa."],
+      "refuge": ["Las runas del refugio están enlazadas. Nadie volverá a caminar solo hacia la niebla."]
+    },
+    "lore": ["Tres corazones sostienen la niebla: ciénaga, santuario y vacío.", "Cuando los tres callen, el reino podrá elegir su propio destino."]
+  },
+  "eira": {
+    "name": "Eira, Cazatormentas",
+    "role": "storm_hunter",
+    "zone_id": "peak",
+    "tx": 274,
+    "ty": 47,
+    "refuge_tx": 13,
+    "refuge_ty": 47,
+    "rescue_quest": "storm_refuge",
+    "color": [112, 184, 226],
+    "dialogue": {
+      "default": ["La tormenta no cae del cielo. Algo en la montaña la mantiene despierta."],
+      "all_bosses": ["El trueno se aleja. Por primera vez puedo escuchar mi propia respiración."],
+      "refuge": ["Construiré pararrayos para este lugar. La próxima tormenta encontrará un hogar preparado."]
+    },
+    "lore": ["Las arpías siguen corrientes que nacen en el Corazón del Vacío.", "Vence el Ojo de la Tormenta y podré abandonar esta vigilia."]
+  }
+}

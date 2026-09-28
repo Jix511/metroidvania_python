@@ -1,0 +1,496 @@
+{
+  "slots": [
+    "weapon",
+    "helmet",
+    "armor",
+    "boots",
+    "accessory"
+  ],
+  "slot_names": {
+    "weapon": "Arma",
+    "helmet": "Casco",
+    "armor": "Armadura",
+    "boots": "Botas",
+    "accessory": "Accesorio"
+  },
+  "rarities": {
+    "common": {
+      "name": "Común",
+      "mult": 1.0,
+      "affixes": [
+        0,
+        1
+      ],
+      "weight": 55,
+      "color": [
+        180,
+        180,
+        180
+      ]
+    },
+    "magic": {
+      "name": "Mágico",
+      "mult": 1.25,
+      "affixes": [
+        1,
+        2
+      ],
+      "weight": 25,
+      "color": [
+        100,
+        150,
+        255
+      ]
+    },
+    "rare": {
+      "name": "Raro",
+      "mult": 1.55,
+      "affixes": [
+        2,
+        3
+      ],
+      "weight": 12,
+      "color": [
+        255,
+        255,
+        100
+      ]
+    },
+    "epic": {
+      "name": "Épico",
+      "mult": 2.0,
+      "affixes": [
+        3,
+        4
+      ],
+      "weight": 6,
+      "color": [
+        200,
+        100,
+        255
+      ]
+    },
+    "legendary": {
+      "name": "Legendario",
+      "mult": 2.8,
+      "affixes": [
+        4,
+        5
+      ],
+      "weight": 2,
+      "color": [
+        255,
+        150,
+        50
+      ]
+    }
+  },
+  "base_items": {
+    "weapon": [
+      {
+        "base_id": "rusty_sword",
+        "name": "Espada",
+        "stats": {
+          "damage": 4
+        }
+      },
+      {
+        "base_id": "dagger",
+        "name": "Daga",
+        "stats": {
+          "damage": 3,
+          "crit_chance": 0.03
+        }
+      },
+      {
+        "base_id": "staff",
+        "name": "Bastón",
+        "stats": {
+          "damage": 5,
+          "speed": -10
+        }
+      },
+      {
+        "base_id": "bow",
+        "name": "Arco",
+        "stats": {
+          "damage": 4,
+          "crit_chance": 0.05
+        }
+      },
+      {
+        "base_id": "rune_blade",
+        "name": "Hoja Rúnica",
+        "stats": {
+          "damage": 6,
+          "fire_damage": 0.1
+        }
+      },
+      {
+        "base_id": "reaper",
+        "name": "Guadaña",
+        "stats": {
+          "damage": 5,
+          "crit_damage": 0.3,
+          "speed": -6
+        }
+      }
+    ],
+    "helmet": [
+      {
+        "base_id": "cloth_hood",
+        "name": "Capucha",
+        "stats": {
+          "max_health": 8
+        }
+      },
+      {
+        "base_id": "iron_helm",
+        "name": "Yelmo",
+        "stats": {
+          "max_health": 14,
+          "damage_taken": 0.98
+        }
+      }
+    ],
+    "armor": [
+      {
+        "base_id": "cloth_robe",
+        "name": "Túnica",
+        "stats": {
+          "max_health": 12
+        }
+      },
+      {
+        "base_id": "leather_armor",
+        "name": "Armadura Cuero",
+        "stats": {
+          "max_health": 20,
+          "damage_taken": 0.97
+        }
+      },
+      {
+        "base_id": "plate_armor",
+        "name": "Armadura Placas",
+        "stats": {
+          "max_health": 30,
+          "damage_taken": 0.95,
+          "speed": -8
+        }
+      },
+      {
+        "base_id": "scale_armor",
+        "name": "Armadura Escamas",
+        "stats": {
+          "max_health": 26,
+          "damage_taken": 0.96,
+          "evasion": 0.03
+        }
+      }
+    ],
+    "boots": [
+      {
+        "base_id": "cloth_boots",
+        "name": "Botas Tela",
+        "stats": {
+          "speed": 12,
+          "max_health": 5
+        }
+      },
+      {
+        "base_id": "swift_boots",
+        "name": "Botas Ligeras",
+        "stats": {
+          "speed": 25
+        }
+      },
+      {
+        "base_id": "heavy_boots",
+        "name": "Botas Pesadas",
+        "stats": {
+          "max_health": 15,
+          "speed": 5
+        }
+      }
+    ],
+    "accessory": [
+      {
+        "base_id": "wood_ring",
+        "name": "Anillo",
+        "stats": {
+          "crit_chance": 0.04
+        }
+      },
+      {
+        "base_id": "amulet",
+        "name": "Amuleto",
+        "stats": {
+          "xp_gain": 0.08,
+          "max_health": 10
+        }
+      },
+      {
+        "base_id": "charm",
+        "name": "Talismán",
+        "stats": {
+          "evasion": 0.04,
+          "gold_find": 0.1
+        }
+      },
+      {
+        "base_id": "hunter_eye",
+        "name": "Ojo Cazador",
+        "stats": {
+          "crit_chance": 0.05,
+          "crit_damage": 0.2
+        }
+      }
+    ]
+  },
+  "affixes": [
+    {
+      "id": "sturdy",
+      "name": "Robusto",
+      "stats": {
+        "max_health": 12
+      }
+    },
+    {
+      "id": "sharp",
+      "name": "Afilado",
+      "stats": {
+        "damage": 3
+      }
+    },
+    {
+      "id": "swift",
+      "name": "Veloz",
+      "stats": {
+        "speed": 12
+      }
+    },
+    {
+      "id": "lucky",
+      "name": "Afortunado",
+      "stats": {
+        "crit_chance": 0.04
+      }
+    },
+    {
+      "id": "ghostly",
+      "name": "Fantasmal",
+      "stats": {
+        "evasion": 0.03
+      }
+    },
+    {
+      "id": "wise",
+      "name": "Sabio",
+      "stats": {
+        "xp_gain": 0.08
+      }
+    },
+    {
+      "id": "greedy",
+      "name": "Avaro",
+      "stats": {
+        "gold_find": 0.12
+      }
+    },
+    {
+      "id": "warded",
+      "name": "Protector",
+      "stats": {
+        "damage_taken": 0.97
+      }
+    },
+    {
+      "id": "brutal",
+      "name": "Brutal",
+      "stats": {
+        "damage": 5,
+        "max_health": -5
+      }
+    },
+    {
+      "id": "titanic",
+      "name": "Titánico",
+      "stats": {
+        "max_health": 25,
+        "speed": -6
+      }
+    },
+    {
+      "id": "cruel",
+      "name": "Cruel",
+      "stats": {
+        "crit_damage": 0.3
+      }
+    },
+    {
+      "id": "pyro",
+      "name": "Piromante",
+      "stats": {
+        "fire_damage": 0.15
+      }
+    },
+    {
+      "id": "glacial",
+      "name": "Glacial",
+      "stats": {
+        "damage": 2,
+        "crit_chance": 0.03
+      }
+    },
+    {
+      "id": "hunter",
+      "name": "Cazador",
+      "stats": {
+        "xp_gain": 0.06,
+        "gold_find": 0.08
+      }
+    }
+  ],
+  "starting_kits": {
+    "warrior": [
+      {
+        "slot": "weapon",
+        "name": "Espada Gastada",
+        "stats": {
+          "damage": 3
+        }
+      },
+      {
+        "slot": "armor",
+        "name": "Túnica Gastada",
+        "stats": {
+          "max_health": 8
+        }
+      }
+    ],
+    "rogue": [
+      {
+        "slot": "weapon",
+        "name": "Daga Gastada",
+        "stats": {
+          "damage": 2,
+          "crit_chance": 0.03
+        }
+      },
+      {
+        "slot": "boots",
+        "name": "Botas Gastadas",
+        "stats": {
+          "speed": 10
+        }
+      }
+    ],
+    "ranger": [
+      {
+        "slot": "weapon",
+        "name": "Arco Gastado",
+        "stats": {
+          "damage": 3
+        }
+      },
+      {
+        "slot": "boots",
+        "name": "Botas Gastadas",
+        "stats": {
+          "speed": 10
+        }
+      }
+    ],
+    "mage": [
+      {
+        "slot": "weapon",
+        "name": "Bastón Gastado",
+        "stats": {
+          "damage": 4
+        }
+      }
+    ],
+    "kitsune": [
+      {
+        "slot": "weapon",
+        "name": "Abanico Espiritual",
+        "stats": {
+          "damage": 3,
+          "fire_damage": 0.06
+        }
+      },
+      {
+        "slot": "accessory",
+        "name": "Amuleto Zorruno",
+        "stats": {
+          "speed": 8,
+          "evasion": 0.03
+        }
+      }
+    ],
+    "reaper": [
+      {
+        "slot": "weapon",
+        "name": "Guadaña del Umbral",
+        "stats": {
+          "damage": 4,
+          "crit_chance": 0.03
+        }
+      },
+      {
+        "slot": "accessory",
+        "name": "Relicario de Ánimas",
+        "stats": {
+          "max_health": 8,
+          "speed": 5
+        }
+      }
+    ]
+  },
+  "economy": {
+    "potion_price": 30,
+    "potion_heal_fraction": 0.4,
+    "potion_max": 5,
+    "refresh_base": 20,
+    "refresh_per_level": 10,
+    "max_upgrade": 8,
+    "rarity_order": [
+      "common",
+      "magic",
+      "rare",
+      "epic",
+      "legendary"
+    ],
+    "rarity_cost_multipliers": {
+      "common": 1.0,
+      "magic": 1.5,
+      "rare": 2.2,
+      "epic": 3.2,
+      "legendary": 4.5
+    },
+    "slot_base_prices": {
+      "weapon": 40,
+      "armor": 35,
+      "helmet": 25,
+      "boots": 25,
+      "accessory": 45
+    },
+    "shop_stock_slots": [
+      "weapon",
+      "weapon",
+      "helmet",
+      "armor",
+      "boots",
+      "accessory"
+    ],
+    "buy_level_increment": 8,
+    "buy_base_factor": 0.6,
+    "buy_rarity_factor": 0.55,
+    "buy_power_factor": 0.4,
+    "sell_divisor": 3,
+    "upgrade_base_cost": 30,
+    "upgrade_exponent": 1.6,
+    "upgrade_primary_multiplier": 1.12,
+    "upgrade_secondary_multiplier": 1.1
+  }
+}

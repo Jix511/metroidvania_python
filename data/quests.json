@@ -1,0 +1,67 @@
+{
+  "swamp_echoes": {
+    "giver": "maela",
+    "title": "Ecos en la Ciénaga",
+    "summary": "Investiga las Cavernas Húmedas y derrota a la Madre de la Ciénaga.",
+    "prerequisites": [],
+    "condition": {"type": "boss", "id": "cavern_mother"},
+    "reward": {"xp": 120, "gold": 70, "skill_points": 1},
+    "dialogue": {
+      "offer": ["Los metales cantan cuando algo antiguo despierta bajo tierra.", "Encuentra a la Madre de la Ciénaga y silencia ese eco."],
+      "ready": ["El aire ya no trae ese hedor. Lo conseguiste.", "Toma esto. Una buena forja también sabe agradecer."],
+      "completed": ["Las cavernas vuelven a respirar."]
+    }
+  },
+  "broken_knight": {
+    "giver": "caldus",
+    "title": "El Caballero Roto",
+    "summary": "Derrota al Caballero Roto que custodia las Ruinas Sumergidas.",
+    "prerequisites": ["swamp_echoes"],
+    "condition": {"type": "miniboss", "id": "broken_knight"},
+    "reward": {"xp": 160, "gold": 90, "skill_points": 1},
+    "dialogue": {
+      "offer": ["Un caballero sin juramento vaga por las ruinas.", "Dale el descanso que su armadura le niega."],
+      "ready": ["Reconozco las marcas de esa espada. Su guardia terminó al fin."],
+      "completed": ["Hasta el hierro roto merece memoria."]
+    }
+  },
+  "lost_forge": {
+    "giver": "ilyra",
+    "title": "Forja Perdida",
+    "summary": "Recupera el Talismán del Vigía oculto en las cavernas.",
+    "prerequisites": ["swamp_echoes"],
+    "condition": {"type": "item_name", "name": "Talismán del Vigía"},
+    "reward": {"xp": 100, "gold": 140, "skill_points": 0},
+    "dialogue": {
+      "offer": ["Mi maestra dejó un talismán en una plataforma de las cavernas.", "Tráelo contigo. No necesito quedármelo; basta saber que no se perdió."],
+      "ready": ["Ahí está. La misma runa, todavía encendida.", "Consérvalo. Ya ha elegido a quien proteger."],
+      "completed": ["El legado de la forja camina contigo."]
+    }
+  },
+  "storm_refuge": {
+    "giver": "eira",
+    "title": "El Ojo de la Tormenta",
+    "summary": "Supera el desafío del Ojo de la Tormenta y libera a Eira de su vigilia.",
+    "prerequisites": ["lost_forge"],
+    "condition": {"type": "encounter", "id": "peak_eye"},
+    "reward": {"xp": 180, "gold": 130, "skill_points": 1},
+    "dialogue": {
+      "offer": ["Las arpías protegen el núcleo de la tormenta.", "Rompe sus oleadas y podré guiar a los supervivientes al Claro."],
+      "ready": ["El cielo se abrió. Mi vigilia ha terminado.", "Te encontraré en el refugio; aún quedan techos que proteger."],
+      "completed": ["El refugio ya tiene una Cazatormentas."]
+    }
+  },
+  "heart_of_kingdom": {
+    "giver": "sira",
+    "title": "Corazón del Reino",
+    "summary": "Derrota a los tres grandes jefes y libera el reino fracturado.",
+    "prerequisites": ["broken_knight", "lost_forge", "storm_refuge"],
+    "condition": {"type": "boss_count", "count": 3},
+    "reward": {"xp": 300, "gold": 250, "skill_points": 2},
+    "dialogue": {
+      "offer": ["Ya no eres una visitante. El reino reconoce tus pasos.", "Rompe las tres cadenas y alcanza el Corazón del Vacío."],
+      "ready": ["Las runas de mi yunque han vuelto a encenderse.", "El reino sigue herido, pero ahora puede sanar."],
+      "completed": ["La nueva historia del reino empieza aquí."]
+    }
+  }
+}

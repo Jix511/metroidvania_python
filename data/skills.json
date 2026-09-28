@@ -1,0 +1,791 @@
+{
+  "categories": [
+    "combat",
+    "defense",
+    "movement",
+    "utility"
+  ],
+  "universal": {
+    "health_boost": {
+      "id": "health_boost",
+      "name": "Vitalidad",
+      "description": "+20 vida máxima por rango",
+      "cost": 1,
+      "max_rank": 5,
+      "requires": [],
+      "category": "defense",
+      "effects": {
+        "health": 20
+      },
+      "icon": "❤"
+    },
+    "damage_boost": {
+      "id": "damage_boost",
+      "name": "Fuerza",
+      "description": "+5% daño por rango",
+      "cost": 1,
+      "max_rank": 5,
+      "requires": [],
+      "category": "combat",
+      "effects": {
+        "stat_multiplier": {
+          "damage": 1.05
+        }
+      },
+      "icon": "💪"
+    },
+    "speed_boost": {
+      "id": "speed_boost",
+      "name": "Agilidad",
+      "description": "+5% velocidad por rango",
+      "cost": 1,
+      "max_rank": 5,
+      "requires": [],
+      "category": "movement",
+      "effects": {
+        "stat_multiplier": {
+          "speed": 1.05
+        }
+      },
+      "icon": "⚡"
+    },
+    "xp_boost": {
+      "id": "xp_boost",
+      "name": "Sabiduría",
+      "description": "+10% experiencia ganada por rango",
+      "cost": 1,
+      "max_rank": 3,
+      "requires": [],
+      "category": "utility",
+      "effects": {
+        "stat_multiplier": {
+          "xp_gain": 1.1
+        }
+      },
+      "icon": "📚"
+    },
+    "gold_find": {
+      "id": "gold_find",
+      "name": "Oportunista",
+      "description": "+15% oro encontrado por rango",
+      "cost": 1,
+      "max_rank": 3,
+      "requires": [],
+      "category": "utility",
+      "effects": {
+        "stat_multiplier": {
+          "gold_find": 1.15
+        }
+      },
+      "icon": "💰"
+    }
+  },
+  "classes": {
+    "warrior": {
+      "heavy_strikes": {
+        "id": "heavy_strikes",
+        "name": "Golpes Pesados",
+        "description": "Aumenta el daño base un 15% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "damage": 1.15
+          }
+        },
+        "icon": "🪓"
+      },
+      "crushing_blow": {
+        "id": "crushing_blow",
+        "name": "Golpe Aplastante",
+        "description": "Los ataques tienen 20% de probabilidad de aturdir 1s",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "heavy_strikes"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "stun_chance"
+        },
+        "icon": "💥"
+      },
+      "executioner": {
+        "id": "executioner",
+        "name": "Verdugo",
+        "description": "+50% daño contra enemigos con menos del 30% vida",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "heavy_strikes"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "execute_bonus"
+        },
+        "icon": "☠"
+      },
+      "iron_skin": {
+        "id": "iron_skin",
+        "name": "Piel de Hierro",
+        "description": "Aumenta vida máxima +25 por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "defense",
+        "effects": {
+          "health": 25
+        },
+        "icon": "🛡"
+      },
+      "damage_reduction": {
+        "id": "damage_reduction",
+        "name": "Reducción de Daño",
+        "description": "Reduce todo daño recibido en un 10% por rango",
+        "cost": 2,
+        "max_rank": 2,
+        "requires": [
+          "iron_skin"
+        ],
+        "category": "defense",
+        "effects": {
+          "stat_multiplier": {
+            "damage_taken": 0.9
+          }
+        },
+        "icon": "🛡"
+      },
+      "last_stand": {
+        "id": "last_stand",
+        "name": "Última Voluntad",
+        "description": "Al llegar a 0 vida, sobrevives con 1 HP una vez por combate",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "damage_reduction"
+        ],
+        "category": "defense",
+        "effects": {
+          "new_ability": "last_stand"
+        },
+        "icon": "💚"
+      },
+      "combat_roll": {
+        "id": "combat_roll",
+        "name": "Rodadura de Combate",
+        "description": "Desbloquea esquiva hacia adelante (Shift + dirección)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [],
+        "category": "movement",
+        "effects": {
+          "new_ability": "dodge_roll"
+        },
+        "icon": "🤸"
+      },
+      "charge_attack": {
+        "id": "charge_attack",
+        "name": "Ataque Cargado",
+        "description": "Mantén ataque para cargar golpe devastador (2x daño)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "combat_roll"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "charge_attack"
+        },
+        "icon": "⚡"
+      },
+      "whirlwind": {
+        "id": "whirlwind",
+        "name": "Torbellino",
+        "description": "Ataque en área 360° alrededor del jugador",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "charge_attack"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "whirlwind"
+        },
+        "icon": "🌪"
+      }
+    },
+    "rogue": {
+      "shadow_strike": {
+        "id": "shadow_strike",
+        "name": "Golpe Sombrío",
+        "description": "+25% probabilidad de crítico, críticos hacen más daño",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "crit_chance": 1.25,
+            "crit_damage": 1.25
+          }
+        },
+        "icon": "🗡"
+      },
+      "backstab": {
+        "id": "backstab",
+        "name": "Puñalada Trapera",
+        "description": "Atacar por detrás garantiza crítico y +100% daño",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "shadow_strike"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "backstab"
+        },
+        "icon": "🔪"
+      },
+      "death_mark": {
+        "id": "death_mark",
+        "name": "Marca de Muerte",
+        "description": "Marcar enemigo (click derecho): +50% daño recibido por 5s",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "shadow_strike"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "death_mark"
+        },
+        "icon": "🎯"
+      },
+      "swift_foot": {
+        "id": "swift_foot",
+        "name": "Pie Veloz",
+        "description": "Aumenta velocidad de movimiento +15% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "movement",
+        "effects": {
+          "stat_multiplier": {
+            "speed": 1.15
+          }
+        },
+        "icon": "👟"
+      },
+      "double_jump": {
+        "id": "double_jump",
+        "name": "Doble Salto",
+        "description": "Permite saltar una segunda vez en el aire",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "swift_foot"
+        ],
+        "category": "movement",
+        "effects": {
+          "new_ability": "double_jump"
+        },
+        "icon": "🦘"
+      },
+      "wall_jump": {
+        "id": "wall_jump",
+        "name": "Salto en Pared",
+        "description": "Salta rebotando en paredes verticales",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "double_jump"
+        ],
+        "category": "movement",
+        "effects": {
+          "new_ability": "wall_jump"
+        },
+        "icon": "🧗"
+      },
+      "dash": {
+        "id": "dash",
+        "name": "Dash",
+        "description": "Desplazamiento rápido invulnerable (Shift)",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "wall_jump"
+        ],
+        "category": "movement",
+        "effects": {
+          "new_ability": "dash"
+        },
+        "icon": "💨"
+      },
+      "evasion": {
+        "id": "evasion",
+        "name": "Evasión",
+        "description": "15% probabilidad de evitar completamente un ataque por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "defense",
+        "effects": {
+          "stat_multiplier": {
+            "evasion": 1.15
+          }
+        },
+        "icon": "👻"
+      },
+      "poison_immunity": {
+        "id": "poison_immunity",
+        "name": "Inmunidad al Veneno",
+        "description": "Inmune a veneno y sangrado",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "evasion"
+        ],
+        "category": "defense",
+        "effects": {
+          "new_ability": "poison_immunity"
+        },
+        "icon": "☠"
+      }
+    },
+    "mage": {
+      "fire_mastery": {
+        "id": "fire_mastery",
+        "name": "Dominio del Fuego",
+        "description": "Proyectiles de fuego: +30% daño, queman 3s",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "fire_damage": 1.3
+          },
+          "new_ability": "fire_burn"
+        },
+        "icon": "🔥"
+      },
+      "fireball": {
+        "id": "fireball",
+        "name": "Bola de Fuego",
+        "description": "Lanza proyectil explosivo de fuego (Click derecho)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "fire_mastery"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "fireball"
+        },
+        "icon": "🔥"
+      },
+      "meteor": {
+        "id": "meteor",
+        "name": "Lluvia de Meteoritos",
+        "description": "Cae meteoritos en área grande (Habilidad definitiva)",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "fireball"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "meteor"
+        },
+        "icon": "☄"
+      },
+      "ice_mastery": {
+        "id": "ice_mastery",
+        "name": "Dominio del Hielo",
+        "description": "Proyectiles de hielo: ralentizan 50% por 2s",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "ice_slow": 1.5
+          },
+          "new_ability": "ice_slow"
+        },
+        "icon": "❄"
+      },
+      "frost_nova": {
+        "id": "frost_nova",
+        "name": "Nova de Escarcha",
+        "description": "Explosión de hielo alrededor: congela 2s (Tecla V)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "ice_mastery"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "frost_nova"
+        },
+        "icon": "❄"
+      },
+      "blizzard": {
+        "id": "blizzard",
+        "name": "Ventisca",
+        "description": "Zona de hielo persistente que daña y ralentiza",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "frost_nova"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "blizzard"
+        },
+        "icon": "🌨"
+      },
+      "mana_shield": {
+        "id": "mana_shield",
+        "name": "Escudo de Maná",
+        "description": "Convierte 30% del daño recibido en coste de maná",
+        "cost": 1,
+        "max_rank": 2,
+        "requires": [],
+        "category": "defense",
+        "effects": {
+          "new_ability": "mana_shield",
+          "stat_multiplier": {
+            "mana_shield": 0.3
+          }
+        },
+        "icon": "🔮"
+      },
+      "arcane_orbit": {
+        "id": "arcane_orbit",
+        "name": "Órbita Arcana",
+        "description": "Orbes giratorios que dañan enemigos cercanos",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "mana_shield"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "arcane_orbit"
+        },
+        "icon": "⭕"
+      },
+      "teleport": {
+        "id": "teleport",
+        "name": "Teletransporte",
+        "description": "Teletransporte corto instantáneo (Tecla E)",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "arcane_orbit"
+        ],
+        "category": "movement",
+        "effects": {
+          "new_ability": "teleport"
+        },
+        "icon": "✨"
+      }
+    },
+    "ranger": {
+      "precise_shot": {
+        "id": "precise_shot",
+        "name": "Tiro Certero",
+        "description": "Aumenta el daño de flechas un 15% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "damage": 1.15
+          }
+        },
+        "icon": "🏹"
+      },
+      "piercing": {
+        "id": "piercing",
+        "name": "Flecha Perforante",
+        "description": "Las flechas atraviesan +1 enemigo por rango",
+        "cost": 2,
+        "max_rank": 2,
+        "requires": [
+          "precise_shot"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "piercing"
+        },
+        "icon": "➹"
+      },
+      "triple_shot": {
+        "id": "triple_shot",
+        "name": "Triple Disparo",
+        "description": "Abanico de 3 flechas (Click derecho)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "precise_shot"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "triple_shot"
+        },
+        "icon": "🔱"
+      },
+      "explosive": {
+        "id": "explosive",
+        "name": "Flecha Explosiva",
+        "description": "Impactos explotan (área + quemadura)",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": [
+          "triple_shot"
+        ],
+        "category": "combat",
+        "effects": {
+          "new_ability": "explosive"
+        },
+        "icon": "💥"
+      },
+      "eagle_eye": {
+        "id": "eagle_eye",
+        "name": "Ojo de Halcón",
+        "description": "+20% crítico y flechas más veloces por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {
+          "stat_multiplier": {
+            "crit_chance": 1.2
+          }
+        },
+        "icon": "🦅"
+      },
+      "bark_skin": {
+        "id": "bark_skin",
+        "name": "Piel de Corteza",
+        "description": "Aumenta vida máxima +20 por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "defense",
+        "effects": {
+          "health": 20
+        },
+        "icon": "🌳"
+      },
+      "camouflage": {
+        "id": "camouflage",
+        "name": "Camuflaje",
+        "description": "12% probabilidad de evitar ataques por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [
+          "bark_skin"
+        ],
+        "category": "defense",
+        "effects": {
+          "stat_multiplier": {
+            "evasion": 1.12
+          }
+        },
+        "icon": "🍃"
+      },
+      "ranger_jump": {
+        "id": "ranger_jump",
+        "name": "Salto Doble",
+        "description": "Permite saltar una segunda vez en el aire",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [],
+        "category": "movement",
+        "effects": {
+          "new_ability": "double_jump"
+        },
+        "icon": "🦘"
+      },
+      "backflip": {
+        "id": "backflip",
+        "name": "Voltereta Atrás",
+        "description": "Salto atrás que dispara una flecha (Shift)",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": [
+          "ranger_jump"
+        ],
+        "category": "movement",
+        "effects": {
+          "new_ability": "backflip"
+        },
+        "icon": "🤸"
+      }
+    },
+    "kitsune": {
+      "spirit_flame": {
+        "id": "spirit_flame",
+        "name": "Llama Espiritual",
+        "description": "Aumenta el daño un 12% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {"stat_multiplier": {"damage": 1.12}},
+        "icon": "F"
+      },
+      "spirit_burn": {
+        "id": "spirit_burn",
+        "name": "Fuego Persistente",
+        "description": "El fuego zorruno causa quemadura",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": ["spirit_flame"],
+        "category": "combat",
+        "effects": {"new_ability": "spirit_burn"},
+        "icon": "B"
+      },
+      "nine_tail_burst": {
+        "id": "nine_tail_burst",
+        "name": "Estallido de Nueve Colas",
+        "description": "Click derecho lanza un abanico de fuego espiritual",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": ["spirit_burn"],
+        "category": "combat",
+        "effects": {"new_ability": "nine_tail_burst"},
+        "icon": "9"
+      },
+      "spectral_agility": {
+        "id": "spectral_agility",
+        "name": "Agilidad Espectral",
+        "description": "Aumenta la velocidad un 8% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "movement",
+        "effects": {"stat_multiplier": {"speed": 1.08}},
+        "icon": ">"
+      },
+      "spirit_leap": {
+        "id": "spirit_leap",
+        "name": "Salto Espiritual",
+        "description": "Permite un segundo salto en el aire",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": ["spectral_agility"],
+        "category": "movement",
+        "effects": {"new_ability": "double_jump"},
+        "icon": "^"
+      },
+      "fox_guard": {
+        "id": "fox_guard",
+        "name": "Guardia del Santuario",
+        "description": "Reduce el daño recibido un 8% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "defense",
+        "effects": {"stat_multiplier": {"damage_taken": 0.92}},
+        "icon": "S"
+      },
+      "ancestral_vigor": {
+        "id": "ancestral_vigor",
+        "name": "Vigor Ancestral",
+        "description": "Aumenta la vida máxima en 15 por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": ["fox_guard"],
+        "category": "defense",
+        "effects": {"health": 15},
+        "icon": "+"
+      }
+    },
+    "reaper": {
+      "soul_edge": {
+        "id": "soul_edge",
+        "name": "Filo de Ánima",
+        "description": "Aumenta el daño un 10% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "combat",
+        "effects": {"stat_multiplier": {"damage": 1.1}},
+        "icon": "S"
+      },
+      "soul_siphon": {
+        "id": "soul_siphon",
+        "name": "Sifón Vital",
+        "description": "Las almas cosechadas restauran vida",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": ["soul_edge"],
+        "category": "combat",
+        "effects": {"new_ability": "soul_siphon"},
+        "icon": "+"
+      },
+      "requiem": {
+        "id": "requiem",
+        "name": "Réquiem",
+        "description": "Cosecha Espectral libera cinco filos más poderosos",
+        "cost": 3,
+        "max_rank": 1,
+        "requires": ["soul_siphon"],
+        "category": "combat",
+        "effects": {"new_ability": "requiem"},
+        "icon": "R"
+      },
+      "spectral_stride": {
+        "id": "spectral_stride",
+        "name": "Paso Espectral",
+        "description": "Aumenta la velocidad un 8% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "movement",
+        "effects": {"stat_multiplier": {"speed": 1.08}},
+        "icon": ">"
+      },
+      "wraith_dash": {
+        "id": "wraith_dash",
+        "name": "Cruce del Velo",
+        "description": "Desbloquea un dash espectral",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": ["spectral_stride"],
+        "category": "movement",
+        "effects": {"new_ability": "dash"},
+        "icon": "D"
+      },
+      "grave_guard": {
+        "id": "grave_guard",
+        "name": "Manto Sepulcral",
+        "description": "Reduce el daño recibido un 8% por rango",
+        "cost": 1,
+        "max_rank": 3,
+        "requires": [],
+        "category": "defense",
+        "effects": {"stat_multiplier": {"damage_taken": 0.92}},
+        "icon": "G"
+      },
+      "soul_reservoir": {
+        "id": "soul_reservoir",
+        "name": "Relicario Profundo",
+        "description": "Aumenta la reserva máxima de almas a 125",
+        "cost": 2,
+        "max_rank": 1,
+        "requires": ["grave_guard"],
+        "category": "utility",
+        "effects": {"new_ability": "soul_reservoir"},
+        "icon": "O"
+      }
+    }
+  }
+}

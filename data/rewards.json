@@ -1,0 +1,12 @@
+{
+  "miniboss_unique": {
+    "xp": 0,
+    "gold": 0,
+    "skill_points": 1,
+    "heal": "none",
+    "drop_gold": 30,
+    "items": [
+      {"level_offset": 1, "minimum_rarity": "epic", "luck": 5.0}
+    ]
+  }
+}

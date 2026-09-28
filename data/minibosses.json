@@ -1,0 +1,26 @@
+{
+  "colossal_slime": {
+    "base": "slime",
+    "name": "Moco Colosal",
+    "health": 160,
+    "damage": 12,
+    "speed": 50.0,
+    "xp": 60,
+    "w": 32,
+    "h": 32,
+    "color": [0, 120, 40],
+    "split": ["slime", "slime"]
+  },
+  "broken_knight": {
+    "base": "skeleton",
+    "name": "Caballero Roto",
+    "health": 220,
+    "damage": 14,
+    "speed": 90.0,
+    "xp": 80,
+    "w": 20,
+    "h": 28,
+    "color": [105, 105, 150],
+    "charge": true
+  }
+}
